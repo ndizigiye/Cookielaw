@@ -1,0 +1,15 @@
+<?php 
+	$settings = Mage::helper('cookielaw')->getSettings();
+	
+	if($settings['general']['jquery']==1){
+?>
+		<script type="text/javascript" src="<?php echo $this->getBaseUrl().'skin/frontend/base/default/cookielaw/js/jQuery.js'; ?>"></script>
+<?php 
+	} 
+	if($settings['general']['active']==1){
+?>
+<script type="text/javascript" src="http://www.geoplugin.net/javascript.gp"></script>
+<script type="text/javascript" src="<?php echo $this->getBaseUrl().'skin/frontend/base/default/cookielaw/js/cookieControl-4.1.min.js'; ?>"></script>
+<?php
+	}
+?>

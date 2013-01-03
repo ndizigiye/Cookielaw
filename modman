@@ -1,0 +1,6 @@
+app/code/local/Juno/Cookielaw                          app/code/local/Juno/Cookielaw
+app/design/frontend/base/default/layout                app/design/frontend/base/default/layout
+app/design/frontend/base/default/template/cookielaw    app/design/frontend/base/default/template/cookielaw
+skin/frontend/base/default/cookielaw/images            skin/frontend/base/default/cookielaw/images
+skin/frontend/base/default/cookielaw/js                skin/frontend/base/default/cookielaw/js
+Juno_Cookielaw.xml                                     app/etc/modules/Juno_Cookielaw.xml

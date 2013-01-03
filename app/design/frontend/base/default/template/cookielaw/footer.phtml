@@ -1,0 +1,33 @@
+<?php
+	$settings = Mage::helper('cookielaw')->getSettings();
+	
+	if($settings['general']['active']==1){
+?>
+<script type="text/javascript">//<![CDATA[
+  cookieControl({
+      introText:'<p><?php echo $settings['general']['shortdescription']; ?></p>',
+      fullText:'<p><?php echo $settings['general']['explanation']; ?> <a href="<?php echo $settings['general']['policyurl']; ?>">Privacy Policy</a>.</p>',
+      position:'<?php echo $settings['general']['position']; ?>', // left or right
+      shape:'<?php echo $settings['general']['iconshape']; ?>', // triangle or diamond
+      theme:'<?php echo $settings['general']['theme']; ?>', // light or dark
+      startOpen:<?php echo $settings['general']['open']; ?>,
+      autoHide:<?php echo ($settings['general']['timeout']*1000); ?>,
+      subdomains:<?php echo ($settings['general']['subdomains'] == 1) ? 'true' : 'false' ?>,
+      onAccept:function(){<?php echo $settings['advanced']['onaccept']; ?><?php if($settings['general']['analytics'] != ''){ ?>ccAddAnalytics()<?php } ?>},
+      onReady:function(){<?php echo $settings['advanced']['onready']; ?>},
+      onCookiesAllowed:function(){<?php echo $settings['advanced']['cookiesallowed']; ?><?php if($settings['general']['analytics'] != ''){ ?>ccAddAnalytics()<?php } ?>},
+      onCookiesNotAllowed:function(){<?php echo $settings['advanced']['cookiesnotallowed']; ?>},
+      countries:'<?php echo $settings['general']['countryrestrictions']; ?>' // Or supply a list ['United Kingdom', 'Greece']
+      });
+	  
+	  <?php if($settings['general']['analytics'] != ''){ ?>
+      function ccAddAnalytics() {
+        $.getScript("http://www.google-analytics.com/ga.js", function() {
+          var GATracker = _gat._createTracker('<?php echo $settings['general']['analytics']; ?>');
+          GATracker._trackPageview();
+        });
+      }
+      <?php } ?>
+   //]]>
+</script>  
+<?php } ?>

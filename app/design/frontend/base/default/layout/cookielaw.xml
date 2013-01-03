@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+    	<reference name="head">
+			<block type="core/template" after="-" name="cookielaw" template="cookielaw/head.phtml" />
+    	</reference>
+        <reference name="footer">
+			<block type="core/template" after="-" name="cookielaw" template="cookielaw/footer.phtml" />
+        </reference>
+    </default>
+</layout>

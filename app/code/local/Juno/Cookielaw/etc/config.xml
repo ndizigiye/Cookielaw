@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!-- 
+ /**
+  *
+  *
+  **/
+-->
+<config>
+	<modules>
+		<Juno_Cookielaw>
+			<version>0.2.0</version>
+		</Juno_Cookielaw>
+	</modules>
+	<global>
+		<helpers>
+			<cookielaw>
+				<class>Juno_Cookielaw_Helper</class>
+			</cookielaw>
+		</helpers>
+		<models>
+            <cookielaw>
+                <class>Juno_Cookielaw_Model</class>
+            </cookielaw>
+        </models>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<cookielaw>
+					<file>cookielaw.xml</file>
+				</cookielaw>
+			</updates>
+		</layout>
+	</frontend>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <cookielaw>
+                                            <title>Cookie Law Compliance</title>
+                                        </cookielaw>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <cookielaw>
+            <general>
+				<shortdescription>This site uses some unobtrusive cookies to store information on your computer.</shortdescription>
+				<explanation>This site uses cookies to store information on your computer. Some of these cookies are essential to make our site work and others help us to improve by giving us some insight into how the site is being used.</explanation>
+				<timeout>60</timeout>
+			</general>
+		</cookielaw>
+	</default>
+</config>

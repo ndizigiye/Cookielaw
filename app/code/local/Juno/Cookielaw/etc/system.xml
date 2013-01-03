@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<!-- 
+ /**
+  *
+  *
+  **/
+-->
+<config>
+    <sections>
+        <cookielaw translate="label" module="cookielaw">
+            <label>Cookie Law Compliance</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>5000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>                    
+            <groups>
+            	<general translate="label">
+                    <label>Cookie Control Settings</label>
+                    <comment>
+            			<![CDATA[
+            				<p style="padding: 0 0 10px 0;">Thanks for using the free cookie law module by <a href="http://magento.junowebdesign.co.uk/" target="_juno" style="text-decoration: none;">Juno Web Design</a>, please check out our other modules at: <a href="http://magento.junowebdesign.co.uk/" target="_juno" style="text-decoration: none;">http://magento.junowebdesign.co.uk/</a>. If you require support or training please email <a href="mailto:support@junowebdesign.com" style="text-decoration: none;">support@junowebdesign.com</a>.</p>
+            				<p style="padding: 0 0 10px 0;"><strong>Please note</strong>: for the Google Analytics to function correctly please disable and remove any existing Google Analytics Code, e.g. Admin > System > Config > Google API > Google Anaalytics<p>
+            			]]>
+            		</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+					<fields>
+					    <active>
+					        <label>Activated</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+					        <sort_order>5</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					    </active>
+					    <jquery>
+					        <label>Include jQuery</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+					        <sort_order>10</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+				        	<comment>Use this option if your website needs to include jQuery.</comment>
+					    </jquery>
+					    <shortdescription>
+					        <label>Short Description</label>
+                            <frontend_type>textarea</frontend_type>
+					        <sort_order>15</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+                            <comment>A short description about the use of cookies on this site.</comment>
+					    </shortdescription>
+					    <explanation>
+					        <label>Explanation Text</label>
+                            <frontend_type>textarea</frontend_type>
+					        <sort_order>15</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+                            <comment>A full description about the use of cookies on this site.</comment>
+					    </explanation>
+					    <policyurl>
+					        <label>Privacy Policy</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>20</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>Specify the URL of your site's privacy policy.</comment>
+					    </policyurl>
+					    <iconshape>
+					        <label>Icon Shape</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cookielaw/source_iconshape</source_model>
+					        <sort_order>25</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>The icon will be anchored to the corner of the viewport and won't scroll with your web page.</comment>
+					    </iconshape>
+					    <position>
+					        <label>Icon Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cookielaw/source_position</source_model>
+					        <sort_order>30</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>Choose whether you'd like your icon to appear on the bottom left or bottom right of the browser window.</comment>
+					    </position>
+					    <theme>
+					        <label>Theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>cookielaw/source_theme</source_model>
+					        <sort_order>32</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>Choose whether you would prefer the Cookie Control widget to have a light or dark display.</comment>
+					    </theme>
+					    <open>
+					        <label>Open on-load</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+					        <sort_order>35</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>Visitors to the site will see the pop-up at the bottom of their browser on every page load until they acknowledge the pop-up.</comment>
+					    </open>
+					    <timeout>
+					        <label>Automatic Hide Timeout</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>40</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>How long to keep the information pop-up displayed before it is automatically hidden. Once hidden the information can be accessed by clicking on the icon in the corner.</comment>
+					    </timeout>
+					    <countryrestrictions>
+					        <label>Country Restriction</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>45</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment><![CDATA[Enter a comma separated list of countries for which you wish the pop-up to appear. If left blank Cookie Control will appear for all users from all countries. The full list of countries can be found <a href="http://www.geoplugin.com/iso3166" target="_new">here</a>.]]></comment>
+					    </countryrestrictions>
+					    <subdomains>
+					        <label>Sub-domains</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+					        <sort_order>50</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>    
+					        <comment>If you have multiple sub-domains, you can choose whether Cookie Control opt-ins apply across all sub-domains or just a single domain. E.g. if your main site is at www.mysite.com and your blog is at blog.mysite.com, you'd probably want a single opt-in to apply across both sites. If you select "No", users will have to give there consent once on each site.</comment>                
+					    </subdomains>
+					    <analytics>
+					        <label>Google Analytics</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>55</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>    
+					        <comment>If you use Google Analytics, enter your Google Analytics key here. This will prevent Google Analytics cookies being set before your users allow cookies on your site.</comment>                
+					    </analytics>
+					</fields>
+                </general>
+            	<advanced translate="label">
+                    <label>Advanced Settings</label>
+                    <comment>
+            			<![CDATA[
+            				<p style="padding: 0 0 10px 0;">Only set these if you know JavaScript or your developer has told you what to enter. For further information on these options, please visit <a href="http://civicuk.com/cookie-law/deployment#callbacks" target="_new">Cookie Control Deployment</a></p>
+            			]]>
+            		</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+					<fields>
+					    <onaccept>
+					        <label>On Accept</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>10</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>This callback runs ONCE, the FIRST time a user consents to cookies.</comment>
+					    </onaccept>
+					    <onready>
+					        <label>On Ready</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>15</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>This callback runs immediately after CookieControl has initialised and displayed its widget, if applicable.</comment>
+					    </onready>
+					    <cookiesallowed>
+					        <label>Cookies Allowed</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>20</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>This callback runs after CookieControl has initialised, if cookies are allowed.</comment>
+					    </cookiesallowed>
+					    <cookiesnotallowed>
+					        <label>Cookies Not Allowed</label>
+                            <frontend_type>text</frontend_type>
+					        <sort_order>25</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>0</show_in_website>
+					        <show_in_store>0</show_in_store>                    
+					        <comment>This callback runs after CookieControl has initialised, if cookies are NOT (yet) allowed.</comment>
+					    </cookiesnotallowed>       
+					</fields>
+				</advanced>    
+            </groups>
+        </cookielaw>
+    </sections>     
+</config>
